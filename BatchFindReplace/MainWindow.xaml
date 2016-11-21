@@ -1,0 +1,38 @@
+﻿<Window x:Class="BatchFindReplace.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BatchFindReplace"
+        mc:Ignorable="d"
+        Title="Find Replace Filenames" Height="350" Width="525">
+
+    <Grid>
+        <TextBlock x:Name="path" HorizontalAlignment="Left" Height="25" Margin="10,28,0,0" TextWrapping="Wrap" Text="Path: " VerticalAlignment="Top" Width="35"/>
+        <TextBox x:Name="pathBox" HorizontalAlignment="Left" Height="25" Margin="50,28,0,0" TextWrapping="Wrap" Text="ex:  c:\users\default\documents\" VerticalAlignment="Top" Width="326"/>
+        <Button x:Name="browse" Content="Browse" HorizontalAlignment="Left" Height="25" Margin="376,28,0,0" VerticalAlignment="Top" Width="112" Click="browse_Click"/>
+
+        <TextBlock x:Name="findTextBlock" HorizontalAlignment="Left" Height="19" Margin="0,91,0,0" TextWrapping="Wrap" Text="Find" VerticalAlignment="Top" Width="45"/>
+
+        <TextBox x:Name="charactersBeforeTextBox" HorizontalAlignment="Left" Height="19" Margin="50,91,0,0" TextWrapping="Wrap" Text="" TextAlignment="Center" VerticalAlignment="Top" Width="30" RenderTransformOrigin="1.8,2.674"/>
+        <TextBlock x:Name="charactersBeforeTextBlock" HorizontalAlignment="Left" Height="35" Margin="34,107,0,0" TextWrapping="Wrap" Text="Characters Before" TextAlignment="Center" VerticalAlignment="Top" Width="62"/>
+
+        <TextBlock x:Name="plusTextBlock1" HorizontalAlignment="Left" Height="19" Margin="82,91,0,0" TextWrapping="Wrap" Text="+" TextAlignment="Center" VerticalAlignment="Top" Width="28"/>
+
+        <TextBox x:Name="findTextBox" HorizontalAlignment="Left" Height="19" Margin="110,91,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="310"/>
+
+        <TextBlock x:Name="plusTextBlock2" HorizontalAlignment="Left" Height="19" Margin="425,91,0,0" TextWrapping="Wrap" Text="+" TextAlignment="Center" VerticalAlignment="Top" Width="28"/>
+
+        <TextBox x:Name="charactersAfterTextBox" HorizontalAlignment="Left" Height="19" Margin="458,91,0,0" TextWrapping="Wrap" Text="" TextAlignment="Center" VerticalAlignment="Top" Width="30"/>
+        <TextBlock x:Name="charactersAfterTextBlock" HorizontalAlignment="Left" Height="35" Margin="442,107,0,0" TextWrapping="Wrap" Text="Characters After" TextAlignment="Center" VerticalAlignment="Top" Width="62"/>
+
+        <TextBlock x:Name="replaceTextBlock" HorizontalAlignment="Left" Height="19" Margin="0,155,0,0" TextWrapping="Wrap" Text="Replace" VerticalAlignment="Top" Width="45"/>
+        <TextBox x:Name="replaceTextBox" HorizontalAlignment="Left" Height="19" Margin="50,155,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="438"/>
+
+        <CheckBox x:Name="numberCheckBox" Content="Number" HorizontalAlignment="Left" Height="16" Margin="10,220,0,0" VerticalAlignment="Top" Width="119" Checked="numberFiles_Check" Unchecked="numberFiles_Unchecked"/>
+
+        <CheckBox x:Name="removeNumberCheckBox" Content="Remove Numbers" HorizontalAlignment="Left" Height="16" Margin="129,220,0,0" VerticalAlignment="Top" Width="125" Unchecked="removeNumberFiles_Uncheck" Checked="removeNumberFiles_Checked"/>
+
+        <Button x:Name="processButton" Content="Process" HorizontalAlignment="Left" Height="27" Margin="362,284,0,0" VerticalAlignment="Top" Width="146" Click="processButton_Click"/>
+    </Grid>
+</Window>
